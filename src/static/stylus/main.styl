@@ -1,0 +1,194 @@
+// ====== Базовые подключения
+@import 'components/_base/_variables'
+@import 'components/_base/_mixins'
+
+@import 'components/_base/page'
+
+// ====== Все компоненты
+@import 'components/*'
+
+// ====== Вёрстка
+
+.main
+    height 100vh
+    position relative
+    &__bg
+        height 100%
+        background #9e0022
+        background linear-gradient(135deg, #4f0003 0%,#770210 50%,#a51214 100%)
+
+.form
+    position absolute
+    top 40%
+    left 50%
+    transform translate(-50%,-50%)
+    perspective 1000px
+    & input
+        width 80%
+        margin auto
+        margin-right 50px
+    &::after
+        content ''
+        display block
+        position absolute
+        left 50%
+        bottom -60px
+        width 306px
+        transform translateX(-50%)
+        box-shadow 0 8px 30px 3px #080808
+    &__arrow
+        position absolute
+        top 23px
+        right 7px
+        background-color #000
+        height 35px
+        width 35px
+        &:hover
+            box-shadow 0 0 25px 5px gold
+
+.to
+    &-mail
+        background url('../img/go-to-mail.png') 50% no-repeat
+        transform rotate(-180deg)
+    &-password
+        background url('../img/go-to-password.png') 50% no-repeat
+        &:hover
+            box-shadow 0 0 53px 5px #a09113
+
+.btn-form
+    position absolute
+    bottom -115px
+    left 50%
+    transform translateX(-50%)
+    border none
+    font-size 17px
+    text-transform uppercase
+    padding 6px 45px
+    font-weight bold
+    background-color #ff9d06
+    box-shadow 0 8px 13px 0 #755d06
+    cursor pointer
+    &:hover
+        background-color #ffbe00
+        box-shadow 0 8px 20px 2px #ff9d06
+
+.container
+    display flex
+    justify-content center
+    align-items center
+    width 750px
+    margin auto
+    margin-top 100px
+    transform-style preserve-3d
+
+.side
+    position absolute
+    width 400px
+    height 80px
+    padding-top 20px
+
+.top
+    transform translateY(-40px) rotateX(90deg)
+    background skyblue
+    text-align center
+    box-shadow 0 0 20px 4px #87ceeb
+
+.front
+    transform translateZ(40px)
+    background gold
+    text-align center
+    box-shadow 0 0 20px 3px gold
+
+.flipper
+    transition all $time
+.flipper:target
+    transform rotateX(-90deg)
+
+
+
+// INNER
+
+.page
+    background linear-gradient(135deg, #7f0002 0%,#ba0306 50%,#e00000 100%)
+    color #fff
+
+
+.information
+    display flex
+    align-items flex-start
+    flex-wrap wrap
+    &__left
+    &__right
+        width 50%
+        max-width 350px
+        width 100%
+    &__left
+        margin-right 20px
+    &__bottom
+        width 100%
+        padding-top 45px
+    &__number
+        // 
+    &__title
+        font-size 22px
+        color #fff
+        font-weight 500
+        margin-bottom 20px
+        // 
+    &__birth
+        // 
+    
+.number
+    display flex
+    ul
+        li
+            color white
+            padding-left 15px
+            border-bottom 1px solid #fff
+            margin-bottom 6px
+    &__own
+    &__parent
+        width 50%
+        padding-right 10px
+.birth
+    padding-top 24px
+    ul
+        li
+            font-weight bold
+            color white
+            border-bottom 1px solid #fff
+            margin-bottom 6px
+            span
+                font-weight normal
+                padding-left 6px
+.hemo-version
+    &__title
+        font-size 25px
+        display inline-block
+        margin-right 45px
+    & p
+        display inline-block
+        margin-right 15px
+        text-transform uppercase
+        font-size 18px
+        text-decoration underline
+        span
+            display none
+    & p.active
+        text-align center
+        width 45px
+        height 45px
+        padding-top 3px
+        font-size 25px
+        border 1px solid #fff
+        border-radius 50%
+        position relative
+        & span
+            position absolute
+            top -9px
+            right -13px
+            display block
+            font-size 16px
+            font-weight bold
+
+

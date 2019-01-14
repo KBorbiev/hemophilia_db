@@ -1,0 +1,17 @@
+extends template/wide.pug
+block page-title
+    title Services
+
+block content
+    +b.SECTION.main
+        +e.bg
+        +b.form
+            form(action="#")
+                .container.flipper#target
+                    .top.side#test
+                        +e.A(href="#").arrow.to-mail
+                        input(type="password" placeholder='Password...' required)
+                    .front.side
+                        +e.A(href="#target").arrow.to-password
+                        input(type="text" placeholder='Login...' required)
+                +b.BUTTON.btn-form Send!

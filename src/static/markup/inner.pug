@@ -1,0 +1,46 @@
+extends template/inner.pug
+block page-title
+    title Services
+
+
+block inner-left
+    +b.SECTION.information
+        +e.left
+            +e.number
+                +e.H4.title Номера телефонов:
+                +b.number
+                    +e.own
+                        p Личный
+                        ul
+                            li 0777-77-77-77
+                            li 0555-55-55-55
+                            li 0700-70-70-70
+                    +e.parent
+                        p Родители
+                        ul
+                            li 0777-77-77-77
+                            li 0555-55-55-55
+                            li 0700-70-70-70
+
+        +e.right
+            +e.birth
+                +e.H4.title Дата рождение:
+                +b.birth
+                    ul
+                        li Год:
+                            span 1997
+                        li Месяц:
+                            span Октябрь
+                        li Число:
+                            span 22
+        +e.bottom
+            +b.hemo-version
+                +e.H4.title hemophilia:
+                p A
+                p.active B
+                    span 3%
+                p V
+
+block inner-right
+    +b.block
+        +e.el
